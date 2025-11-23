@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All-in-One Life Toolkit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-logo">🧩</span>
+        <span class="brand-text">All-in-One<br/>Life Toolkit</span>
+      </div>
+      <button class="toggle-theme" id="toggle-theme">🌓</button>
+      <nav class="nav" id="nav">
+        <button data-section="dashboard" class="nav-item active">Dashboard</button>
+        <button data-section="todo" class="nav-item">To-Do</button>
+        <button data-section="habit" class="nav-item">Habit</button>
+        <button data-section="pomodoro" class="nav-item">Pomodoro</button>
+        <button data-section="planner" class="nav-item">Weekly Planner</button>
+        <button data-section="goals" class="nav-item">Goals</button>
+        <button data-section="calculator" class="nav-item">Kalkulator</button>
+        <button data-section="flashcard" class="nav-item">Flashcard</button>
+        <button data-section="dictionary" class="nav-item">Kamus</button>
+        <button data-section="notes" class="nav-item">Markdown</button>
+        <button data-section="finance" class="nav-item">Keuangan</button>
+        <button data-section="shopping" class="nav-item">Belanja</button>
+        <button data-section="recipes" class="nav-item">Resep</button>
+        <button data-section="water" class="nav-item">Air</button>
+        <button data-section="mood" class="nav-item">Mood</button>
+        <button data-section="workout" class="nav-item">Workout</button>
+        <button data-section="sholat" class="nav-item">Sholat</button>
+        <button data-section="weather" class="nav-item">Cuaca</button>
+        <button data-section="password" class="nav-item">Password</button>
+        <button data-section="qr" class="nav-item">QR Code</button>
+        <button data-section="converter" class="nav-item">Converter</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="main-header">
+        <h1 id="page-title">Dashboard</h1>
+        <span id="today-label"></span>
+      </header>
+
+      <section id="dashboard" class="section active"></section>
+      <section id="todo" class="section"></section>
+      <section id="habit" class="section"></section>
+      <section id="pomodoro" class="section"></section>
+      <section id="planner" class="section"></section>
+      <section id="goals" class="section"></section>
+      <section id="calculator" class="section"></section>
+      <section id="flashcard" class="section"></section>
+      <section id="dictionary" class="section"></section>
+      <section id="notes" class="section"></section>
+      <section id="finance" class="section"></section>
+      <section id="shopping" class="section"></section>
+      <section id="recipes" class="section"></section>
+      <section id="water" class="section"></section>
+      <section id="mood" class="section"></section>
+      <section id="workout" class="section"></section>
+      <section id="sholat" class="section"></section>
+      <section id="weather" class="section"></section>
+      <section id="password" class="section"></section>
+      <section id="qr" class="section"></section>
+      <section id="converter" class="section"></section>
+    </main>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
