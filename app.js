@@ -73,6 +73,16 @@ function initNavigation() {
       s.classList.toggle("active", s.id === id);
     });
     title.textContent = btn.textContent;
+    
+    // Close notes panels when switching sections
+    if (id !== 'notes') {
+      const notesSidebar = document.getElementById("notes-sidebar");
+      const notesPreview = document.getElementById("preview-panel");
+      const notesOverlay = document.getElementById("notes-overlay");
+      if (notesSidebar) notesSidebar.classList.remove("active");
+      if (notesPreview) notesPreview.classList.remove("active");
+      if (notesOverlay) notesOverlay.classList.remove("active");
+    }
   });
 }
 

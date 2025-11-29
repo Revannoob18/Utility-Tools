@@ -73,7 +73,7 @@ const translations = {
 };
 
 function loadLanguage() {
-  return localStorage.getItem(LANG_KEY) || "en";
+  return localStorage.getItem(LANG_KEY) || "id";
 }
 
 function saveLanguage(lang) {
@@ -169,9 +169,25 @@ export function initDictionary() {
         <!-- Result Tab -->
         <div class="dict-tab-content active" id="dict-result-tab">
           <div class="dict-empty-state" id="dict-empty">
-            <div class="dict-empty-icon">🔍</div>
-            <div class="dict-empty-title">${t.startSearching}</div>
-            <div class="dict-empty-text">${t.startSearchingDesc}</div>
+            ${currentLang === 'id' ? `
+              <div style="text-align: center; padding: 2rem 1.5rem;">
+                <div style="font-size: 4rem; margin-bottom: 1.5rem;">🚧</div>
+                <div style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--text-primary);">
+                  Fitur Dalam Pengembangan
+                </div>
+                <div style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                  Kamus Bahasa Indonesia sedang dalam proses pengembangan. Mohon nantikan fitur ini segera!
+                </div>
+                <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px; font-weight: 500; cursor: pointer;" onclick="document.querySelector('.dict-lang-toggle').click();">
+                  <span>💡</span>
+                  <span>Klik di sini untuk gunakan kamus Inggris (🇬🇧 EN)</span>
+                </div>
+              </div>
+            ` : `
+              <div class="dict-empty-icon">🔍</div>
+              <div class="dict-empty-title">${t.startSearching}</div>
+              <div class="dict-empty-text">${t.startSearchingDesc}</div>
+            `}
           </div>
 
           <div class="dict-loading" id="dict-loading" style="display: none;">
@@ -257,19 +273,43 @@ export function initDictionary() {
   }
 
   async function searchIndonesian(query) {
+    // Show under development message
+    const resultContainer = document.getElementById("dict-result");
+    const emptyState = document.getElementById("dict-empty");
+    const loadingState = document.getElementById("dict-loading");
+    
+    emptyState.style.display = "none";
+    loadingState.style.display = "none";
+    resultContainer.style.display = "block";
+    
+    resultContainer.innerHTML = `
+      <div style="text-align: center; padding: 3rem 1.5rem;">
+        <div style="font-size: 4rem; margin-bottom: 1.5rem;">🚧</div>
+        <div style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--text-primary);">
+          Fitur Dalam Pengembangan
+        </div>
+        <div style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+          Kamus Bahasa Indonesia sedang dalam proses pengembangan. Mohon nantikan fitur ini segera!
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px; font-weight: 500;">
+          <span>💡</span>
+          <span>Gunakan kamus Inggris dengan klik tombol 🇬🇧 EN</span>
+        </div>
+      </div>
+    `;
+    
+    return;
+    
+    // Original code (disabled for now)
+    /*
     try {
-      // Try using CORS proxy for KBBI API
-      const proxyUrl = 'https://api.allorigins.win/raw?url=';
-      const apiUrl = `https://new-kbbi-api.herokuapp.com/cari/${encodeURIComponent(query)}`;
-      const response = await fetch(proxyUrl + encodeURIComponent(apiUrl));
+      // Load offline Indonesian dictionary
+      const response = await fetch('./data/dictionary.json');
+      const dictionary = await response.json();
       
-      if (!response.ok) {
-        throw new Error("Word not found");
-      }
-
-      const data = await response.json();
+      const data = dictionary[query.toLowerCase()];
       
-      if (!data || data.message === "Tidak ada hasil") {
+      if (!data) {
         throw new Error("Word not found");
       }
 
@@ -277,9 +317,9 @@ export function initDictionary() {
       addToHistory(query);
       currentWord = { word: query, data: data, lang: 'id' };
     } catch (error) {
-      // Fallback: show message that Indonesian dictionary requires internet
-      displayIndonesianFallback(query);
+      throw new Error("Word not found");
     }
+    */
   }
 
   function displayResultEnglish(data, word) {
@@ -374,78 +414,6 @@ export function initDictionary() {
     document.getElementById("dict-toggle-favorite").addEventListener("click", () => {
       toggleFavorite(word, data);
     });
-  }
-
-  function displayIndonesianFallback(word) {
-    const t = translations[currentLang];
-    const resultContainer = document.getElementById("dict-result");
-    
-    // Static Indonesian dictionary data (basic words)
-    const staticDict = {
-      'makan': {
-        arti: [{
-          kelas: 'Verba (kata kerja)',
-          deskripsi: ['memasukkan makanan ke dalam mulut serta mengunyah dan menelannya', 'mendapat atau memperoleh sesuatu', 'menghancurkan atau melenyapkan']
-        }]
-      },
-      'rumah': {
-        arti: [{
-          kelas: 'Nomina (kata benda)',
-          deskripsi: ['bangunan untuk tempat tinggal', 'tempat kediaman (alamat)', 'bangunan pada umumnya']
-        }]
-      },
-      'indah': {
-        arti: [{
-          kelas: 'Adjektiva (kata sifat)',
-          deskripsi: ['amat bagus; elok; permai', 'cantik dan menarik hati']
-        }]
-      },
-      'buku': {
-        arti: [{
-          kelas: 'Nomina (kata benda)',
-          deskripsi: ['lembar kertas yang berjilid, berisi tulisan atau kosong', 'kitab']
-        }]
-      },
-      'belajar': {
-        arti: [{
-          kelas: 'Verba (kata kerja)',
-          deskripsi: ['berusaha memperoleh kepandaian atau ilmu', 'berlatih', 'berubah tingkah laku atau tanggapan']
-        }]
-      },
-      'air': {
-        arti: [{
-          kelas: 'Nomina (kata benda)',
-          deskripsi: ['cairan jernih tidak berwarna, tidak berasa, dan tidak berbau', 'cairan yang keluar atau terdapat dalam tubuh']
-        }]
-      },
-      'api': {
-        arti: [{
-          kelas: 'Nomina (kata benda)',
-          deskripsi: ['panas dan cahaya yang berasal dari sesuatu yang terbakar', 'kebakaran']
-        }]
-      }
-    };
-
-    const data = staticDict[word.toLowerCase()];
-    
-    if (data) {
-      displayResultIndonesian(data, word);
-      addToHistory(word);
-      currentWord = { word: word, data: data, lang: 'id' };
-    } else {
-      resultContainer.innerHTML = `
-        <div class="dict-error-card">
-          <div class="dict-error-icon">🌐</div>
-          <div class="dict-error-title">Memerlukan Koneksi Internet</div>
-          <div class="dict-error-text">Kamus Bahasa Indonesia memerlukan koneksi internet yang stabil.</div>
-          <div class="dict-error-hint">
-            <p style="margin-top: 1rem;">Kata yang tersedia offline: makan, rumah, indah, buku, belajar, air, api</p>
-            <p style="margin-top: 0.5rem;">Atau coba gunakan mode English (🇬🇧) untuk pencarian online.</p>
-          </div>
-        </div>
-      `;
-      resultContainer.style.display = "block";
-    }
   }
 
   function displayError(word) {

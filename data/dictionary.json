@@ -1,7 +1,1097 @@
-[
-  { "word": "produktif", "definition": "Mampu menghasilkan banyak hal bermanfaat dalam waktu tertentu." },
-  { "word": "fokus", "definition": "Konsentrasi pada satu hal tanpa mudah teralihkan." },
-  { "word": "disiplin", "definition": "Taat pada aturan atau jadwal yang telah dibuat." },
-  { "word": "sehat", "definition": "Keadaan tubuh dan pikiran yang bugar dan berfungsi baik." },
-  { "word": "hemat", "definition": "Bijak dalam menggunakan uang dan sumber daya." }
-]
+{
+  "makan": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": [
+        "memasukkan makanan ke dalam mulut serta mengunyah dan menelannya",
+        "mendapat atau memperoleh sesuatu",
+        "menghancurkan atau melenyapkan"
+      ],
+      "contoh": ["Saya sudah makan nasi", "Mobil itu makan bensin banyak"]
+    }]
+  },
+  "minum": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": [
+        "memasukkan air atau cairan lain ke dalam mulut dan menelannya",
+        "mengisap atau menghirup"
+      ],
+      "contoh": ["Adik minum susu setiap pagi", "Minum obat tiga kali sehari"]
+    }]
+  },
+  "rumah": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": [
+        "bangunan untuk tempat tinggal",
+        "tempat kediaman atau alamat",
+        "bangunan pada umumnya"
+      ],
+      "contoh": ["Rumah kami dekat sekolah", "Rumah sakit penuh dengan pasien"]
+    }]
+  },
+  "sekolah": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": [
+        "bangunan atau lembaga untuk belajar dan mengajar",
+        "waktu atau pertemuan ketika murid diberi pelajaran"
+      ],
+      "contoh": ["Saya berangkat sekolah pagi-pagi", "Sekolah dimulai jam 7 pagi"]
+    }]
+  },
+  "indah": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "amat bagus, elok, atau permai",
+        "cantik dan menarik hati",
+        "menyenangkan untuk dilihat atau didengar"
+      ],
+      "contoh": ["Pemandangan di pantai sangat indah", "Suaranya indah sekali"]
+    }]
+  },
+  "cantik": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "elok, molek, dan menarik hati",
+        "bagus benar bentuknya"
+      ],
+      "contoh": ["Gadis itu sangat cantik", "Lukisan yang cantik"]
+    }]
+  },
+  "buku": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": [
+        "lembar kertas yang berjilid, berisi tulisan atau kosong",
+        "kitab atau karangan"
+      ],
+      "contoh": ["Buku pelajaran saya tertinggal", "Dia membaca buku novel"]
+    }]
+  },
+  "belajar": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": [
+        "berusaha memperoleh kepandaian atau ilmu",
+        "berlatih",
+        "berubah tingkah laku atau tanggapan"
+      ],
+      "contoh": ["Kakak sedang belajar matematika", "Belajar dari pengalaman"]
+    }]
+  },
+  "air": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": [
+        "cairan jernih tidak berwarna, tidak berasa, dan tidak berbau yang diperlukan untuk kehidupan",
+        "cairan yang keluar atau terdapat dalam tubuh"
+      ],
+      "contoh": ["Minum air putih 8 gelas sehari", "Air mata mengalir di pipinya"]
+    }]
+  },
+  "api": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": [
+        "panas dan cahaya yang berasal dari sesuatu yang terbakar",
+        "kebakaran"
+      ],
+      "contoh": ["Api unggun menyala terang", "Terjadi kebakaran api"]
+    }]
+  },
+  "kerja": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": [
+        "kegiatan melakukan sesuatu",
+        "sesuatu yang dilakukan untuk mencari nafkah",
+        "tugas atau kewajiban"
+      ],
+      "contoh": ["Ayah pergi kerja pagi-pagi", "Kerja keras akan membuahkan hasil"]
+    }]
+  },
+  "tidur": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": [
+        "dalam keadaan berhenti menggunakan akal dan kesadaran",
+        "berbaring untuk beristirahat"
+      ],
+      "contoh": ["Bayi itu tidur nyenyak", "Tidur malam yang cukup penting"]
+    }]
+  },
+  "main": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": [
+        "melakukan permainan untuk menyenangkan hati",
+        "berbuat sesuatu untuk bersenang-senang"
+      ],
+      "contoh": ["Anak-anak main di taman", "Main bola setiap sore"]
+    }]
+  },
+  "jalan": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": [
+        "tempat untuk lalu lintas orang, kendaraan, dan sebagainya",
+        "perjalanan atau cara"
+      ],
+      "contoh": ["Jalan raya sangat ramai", "Tidak ada jalan lain"]
+    }]
+  },
+  "mobil": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": [
+        "kendaraan darat yang digerakkan oleh tenaga mesin, beroda empat atau lebih"
+      ],
+      "contoh": ["Mobil ayah berwarna hitam", "Mengendarai mobil ke kantor"]
+    }]
+  },
+  "motor": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": [
+        "pesawat atau mesin penggerak",
+        "sepeda motor"
+      ],
+      "contoh": ["Motor saya mogok", "Mengendarai motor ke sekolah"]
+    }]
+  },
+  "marah": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "sangat tidak senang karena dihina atau diperlakukan tidak sepantasnya",
+        "berang atau gusar"
+      ],
+      "contoh": ["Ibu marah karena rumah berantakan", "Jangan marah-marah"]
+    }]
+  },
+  "senang": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "merasa gembira atau puas",
+        "suka atau gemar"
+      ],
+      "contoh": ["Saya senang bertemu teman lama", "Senang membaca buku"]
+    }]
+  },
+  "sedih": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "merasa susah hati atau tidak senang",
+        "bersedih hati atau berduka cita"
+      ],
+      "contoh": ["Dia sedih mendengar berita itu", "Hati yang sedih"]
+    }]
+  },
+  "bahagia": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "keadaan atau perasaan senang dan tenteram",
+        "beruntung"
+      ],
+      "contoh": ["Keluarga yang bahagia", "Hidup bahagia selamanya"]
+    }]
+  },
+  "cinta": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": [
+        "rasa kasih sayang yang sangat mendalam",
+        "rasa suka yang sangat"
+      ],
+      "contoh": ["Cinta kasih ibu tak terbatas", "Cinta pada tanah air"]
+    }]
+  },
+  "sayang": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "kasih atau cinta",
+        "rasa belas kasihan"
+      ],
+      "contoh": ["Ibu sangat sayang kepada anaknya", "Sayang sekali kesempatan itu hilang"]
+    }]
+  },
+  "pintar": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "pandai, cakap, atau cerdas",
+        "mahir dalam mengerjakan sesuatu"
+      ],
+      "contoh": ["Anak yang pintar", "Pintar bermain piano"]
+    }]
+  },
+  "bodoh": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "kurang sempurna perkembangan akal budinya",
+        "tolol atau dungu"
+      ],
+      "contoh": ["Jangan berbuat bodoh", "Pertanyaan bodoh"]
+    }]
+  },
+  "rajin": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "suka bekerja atau belajar dengan sungguh-sungguh",
+        "tekun atau giat"
+      ],
+      "contoh": ["Siswa yang rajin belajar", "Rajin beribadah"]
+    }]
+  },
+  "malas": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "tidak suka bekerja atau melakukan sesuatu",
+        "segan atau enggan"
+      ],
+      "contoh": ["Jangan malas belajar", "Anak yang malas"]
+    }]
+  },
+  "besar": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "lebih dari ukuran sedang",
+        "luas atau lebar"
+      ],
+      "contoh": ["Rumah yang besar", "Masalah besar"]
+    }]
+  },
+  "kecil": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "kurang dari ukuran yang biasa",
+        "tidak besar atau sempit"
+      ],
+      "contoh": ["Kamar yang kecil", "Masalah kecil"]
+    }]
+  },
+  "tinggi": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "jarak dari atas ke bawah yang lebih dari biasa",
+        "mulia atau luhur"
+      ],
+      "contoh": ["Gunung yang tinggi", "Bercita-cita tinggi"]
+    }]
+  },
+  "rendah": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "jarak dari atas ke bawah kurang dari biasa",
+        "hina atau nista"
+      ],
+      "contoh": ["Meja yang rendah", "Rendah hati"]
+    }]
+  },
+  "panjang": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": [
+        "jarak dari ujung ke ujung yang jauh",
+        "lama atau bertele-tele"
+      ],
+      "contoh": ["Rambut yang panjang", "Cerita yang panjang"]
+    }]
+  },
+  "pendek": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak panjang", "singkat"],
+      "contoh": ["Celana pendek", "Cerita pendek"]
+    }]
+  },
+  "lebar": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak sempit", "luas"],
+      "contoh": ["Jalan lebar", "Lapangan lebar"]
+    }]
+  },
+  "sempit": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak lebar", "terbatas ruangnya"],
+      "contoh": ["Kamar sempit", "Jalan sempit"]
+    }]
+  },
+  "tebal": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak tipis", "banyak isinya"],
+      "contoh": ["Buku tebal", "Dinding tebal"]
+    }]
+  },
+  "tipis": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak tebal", "sedikit"],
+      "contoh": ["Kertas tipis", "Jaket tipis"]
+    }]
+  },
+  "berat": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["mempunyai bobot besar", "sulit atau susah"],
+      "contoh": ["Tas berat", "Soal berat"]
+    }]
+  },
+  "ringan": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak berat", "mudah"],
+      "contoh": ["Bulu ringan", "Tugas ringan"]
+    }]
+  },
+  "cepat": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak lambat", "segera atau lekas"],
+      "contoh": ["Lari cepat", "Cepat sembuh"]
+    }]
+  },
+  "lambat": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak cepat", "perlahan"],
+      "contoh": ["Jalan lambat", "Koneksi lambat"]
+    }]
+  },
+  "panas": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tinggi suhunya", "hangat"],
+      "contoh": ["Cuaca panas", "Air panas"]
+    }]
+  },
+  "dingin": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["rendah suhunya", "sejuk"],
+      "contoh": ["Udara dingin", "Es dingin"]
+    }]
+  },
+  "basah": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["mengandung air", "lembap"],
+      "contoh": ["Baju basah", "Tanah basah"]
+    }]
+  },
+  "kering": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak basah", "tidak ada airnya"],
+      "contoh": ["Pakaian kering", "Musim kering"]
+    }]
+  },
+  "keras": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["kuat atau kokoh", "tidak lembut"],
+      "contoh": ["Batu keras", "Suara keras"]
+    }]
+  },
+  "lembut": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak keras", "halus"],
+      "contoh": ["Kain lembut", "Suara lembut"]
+    }]
+  },
+  "kasar": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak halus", "kurang sopan"],
+      "contoh": ["Kulit kasar", "Kata-kata kasar"]
+    }]
+  },
+  "halus": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak kasar", "licin atau mulus"],
+      "contoh": ["Kulit halus", "Tepung halus"]
+    }]
+  },
+  "baru": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["belum pernah ada sebelumnya", "modern"],
+      "contoh": ["Baju baru", "Tahun baru"]
+    }]
+  },
+  "lama": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["sudah ada sejak dulu", "tidak baru"],
+      "contoh": ["Teman lama", "Rumah lama"]
+    }]
+  },
+  "muda": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["belum tua", "masih belia"],
+      "contoh": ["Usia muda", "Pemuda"]
+    }]
+  },
+  "tua": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["sudah lanjut usia", "tidak muda lagi"],
+      "contoh": ["Orang tua", "Pohon tua"]
+    }]
+  },
+  "kaya": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["mempunyai harta benda banyak", "makmur"],
+      "contoh": ["Orang kaya", "Negara kaya"]
+    }]
+  },
+  "miskin": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak mempunyai harta benda", "papa"],
+      "contoh": ["Keluarga miskin", "Rakyat miskin"]
+    }]
+  },
+  "kuat": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["banyak tenaganya", "kokoh"],
+      "contoh": ["Badan kuat", "Bangunan kuat"]
+    }]
+  },
+  "lemah": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak kuat", "tidak bertenaga"],
+      "contoh": ["Badan lemah", "Sinyal lemah"]
+    }]
+  },
+  "sehat": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["baik keadaan badannya", "tidak sakit"],
+      "contoh": ["Tubuh sehat", "Hidup sehat"]
+    }]
+  },
+  "sakit": {
+    "arti": [{
+      "kelas": "Adjektiva (kata sifat)",
+      "deskripsi": ["tidak sehat", "menderita penyakit"],
+      "contoh": ["Badan sakit", "Orang sakit"]
+    }]
+  },
+  "hidup": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["ada kehidupannya", "bernyawa"],
+      "contoh": ["Masih hidup", "Hidup rukun"]
+    }]
+  },
+  "mati": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["sudah hilang nyawanya", "tidak hidup lagi"],
+      "contoh": ["Sudah mati", "Lampu mati"]
+    }]
+  },
+  "datang": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["tiba di suatu tempat", "hadir"],
+      "contoh": ["Datang ke sekolah", "Tamu datang"]
+    }]
+  },
+  "pergi": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["beranjak meninggalkan tempat", "berangkat"],
+      "contoh": ["Pergi ke pasar", "Pergi sekolah"]
+    }]
+  },
+  "pulang": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["kembali ke tempat asal", "balik"],
+      "contoh": ["Pulang kerja", "Pulang kampung"]
+    }]
+  },
+  "sampai": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["telah tiba", "mencapai"],
+      "contoh": ["Sampai rumah", "Sampai tujuan"]
+    }]
+  },
+  "masuk": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["bergerak ke arah dalam", "memasuki"],
+      "contoh": ["Masuk kelas", "Masuk rumah"]
+    }]
+  },
+  "keluar": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["bergerak ke arah luar", "meninggalkan"],
+      "contoh": ["Keluar rumah", "Keluar kelas"]
+    }]
+  },
+  "naik": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["bergerak ke atas", "menaiki"],
+      "contoh": ["Naik gunung", "Naik tangga"]
+    }]
+  },
+  "turun": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["bergerak ke bawah", "menurun"],
+      "contoh": ["Turun tangga", "Turun hujan"]
+    }]
+  },
+  "buka": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["membuat tidak tertutup", "membukakan"],
+      "contoh": ["Buka pintu", "Buka toko"]
+    }]
+  },
+  "tutup": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menutup", "membuat tidak terbuka"],
+      "contoh": ["Tutup pintu", "Tutup mata"]
+    }]
+  },
+  "lihat": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menggunakan mata untuk melihat", "memandang"],
+      "contoh": ["Lihat pemandangan", "Lihat film"]
+    }]
+  },
+  "dengar": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menangkap suara", "mendengarkan"],
+      "contoh": ["Dengar musik", "Dengar cerita"]
+    }]
+  },
+  "bicara": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mengeluarkan kata-kata", "berbicara"],
+      "contoh": ["Bicara jelas", "Bicara sopan"]
+    }]
+  },
+  "diam": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["tidak bergerak", "tidak berbicara"],
+      "contoh": ["Diam saja", "Duduk diam"]
+    }]
+  },
+  "duduk": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["dengan pantat di kursi", "bersila"],
+      "contoh": ["Duduk di kursi", "Duduk tenang"]
+    }]
+  },
+  "berdiri": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["tegak dengan kaki", "tidak duduk"],
+      "contoh": ["Berdiri tegak", "Berdiri lama"]
+    }]
+  },
+  "berbaring": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["tidur dengan badan terlentang", "rebah"],
+      "contoh": ["Berbaring di kasur", "Berbaring sakit"]
+    }]
+  },
+  "lari": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["bergerak cepat dengan kaki", "melarikan diri"],
+      "contoh": ["Lari pagi", "Lari kencang"]
+    }]
+  },
+  "jatuh": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["turun dengan cepat ke bawah", "rebah"],
+      "contoh": ["Jatuh dari pohon", "Jatuh cinta"]
+    }]
+  },
+  "lempar": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["melemparkan sesuatu", "campak"],
+      "contoh": ["Lempar bola", "Lempar sampah"]
+    }]
+  },
+  "tangkap": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menangkap sesuatu", "menahan"],
+      "contoh": ["Tangkap bola", "Tangkap pencuri"]
+    }]
+  },
+  "beli": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["memperoleh dengan membayar", "membeli"],
+      "contoh": ["Beli sayur", "Beli buku"]
+    }]
+  },
+  "jual": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menyerahkan barang dengan bayaran", "menjual"],
+      "contoh": ["Jual mobil", "Jual rumah"]
+    }]
+  },
+  "ambil": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["memegang dan membawa", "mengambil"],
+      "contoh": ["Ambil buku", "Ambil uang"]
+    }]
+  },
+  "taruh": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["meletakkan", "menaruh"],
+      "contoh": ["Taruh di meja", "Taruh tas"]
+    }]
+  },
+  "simpan": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menyimpan", "menabung"],
+      "contoh": ["Simpan uang", "Simpan barang"]
+    }]
+  },
+  "buang": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["membuang", "melemparkan"],
+      "contoh": ["Buang sampah", "Buang waktu"]
+    }]
+  },
+  "cuci": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["membersihkan dengan air", "mencuci"],
+      "contoh": ["Cuci piring", "Cuci baju"]
+    }]
+  },
+  "lap": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mengelap", "menyeka"],
+      "contoh": ["Lap meja", "Lap kaca"]
+    }]
+  },
+  "sapu": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menyapu", "membersihkan lantai"],
+      "contoh": ["Sapu lantai", "Sapu halaman"]
+    }]
+  },
+  "pel": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mengepel", "membersihkan dengan pel"],
+      "contoh": ["Pel lantai", "Pel kamar"]
+    }]
+  },
+  "masak": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["memasak makanan", "membuat masakan"],
+      "contoh": ["Masak nasi", "Masak sayur"]
+    }]
+  },
+  "goreng": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menggoreng", "memasak dengan minyak"],
+      "contoh": ["Goreng ikan", "Goreng tempe"]
+    }]
+  },
+  "rebus": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["merebus", "memasak dengan air mendidih"],
+      "contoh": ["Rebus telur", "Rebus sayur"]
+    }]
+  },
+  "bakar": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["membakar", "memasak dengan api"],
+      "contoh": ["Bakar ikan", "Bakar jagung"]
+    }]
+  },
+  "potong": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["memotong", "membelah"],
+      "contoh": ["Potong rambut", "Potong kue"]
+    }]
+  },
+  "iris": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mengiris", "memotong tipis"],
+      "contoh": ["Iris bawang", "Iris tipis"]
+    }]
+  },
+  "kupas": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mengupas", "melepas kulit"],
+      "contoh": ["Kupas pisang", "Kupas kentang"]
+    }]
+  },
+  "parut": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["memarut", "menghancurkan dengan parutan"],
+      "contoh": ["Parut kelapa", "Parut keju"]
+    }]
+  },
+  "giling": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menggiling", "menghaluskan"],
+      "contoh": ["Giling cabai", "Giling kopi"]
+    }]
+  },
+  "tumbuk": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menumbuk", "memukul dengan alu"],
+      "contoh": ["Tumbuk bumbu", "Tumbuk padi"]
+    }]
+  },
+  "aduk": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mengaduk", "mencampur"],
+      "contoh": ["Aduk adonan", "Aduk teh"]
+    }]
+  },
+  "campur": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mencampur", "menggabungkan"],
+      "contoh": ["Campur bahan", "Campur warna"]
+    }]
+  },
+  "tuang": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menuang", "mencurahkan"],
+      "contoh": ["Tuang air", "Tuang teh"]
+    }]
+  },
+  "angkat": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mengangkat", "mengangkat ke atas"],
+      "contoh": ["Angkat barang", "Angkat tangan"]
+    }]
+  },
+  "bawa": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["membawa", "mengantarkan"],
+      "contoh": ["Bawa tas", "Bawa pulang"]
+    }]
+  },
+  "gendong": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menggendong", "membawa dengan lengan"],
+      "contoh": ["Gendong bayi", "Gendong adik"]
+    }]
+  },
+  "dorong": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mendorong", "menyorongkan"],
+      "contoh": ["Dorong mobil", "Dorong pintu"]
+    }]
+  },
+  "tarik": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menarik", "menghela"],
+      "contoh": ["Tarik tali", "Tarik nafas"]
+    }]
+  },
+  "pukul": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["memukul", "menampar"],
+      "contoh": ["Pukul drum", "Pukul meja"]
+    }]
+  },
+  "tendang": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menendang", "menyepak"],
+      "contoh": ["Tendang bola", "Tendang pintu"]
+    }]
+  },
+  "pegang": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["memegang", "menggenggam"],
+      "contoh": ["Pegang tangan", "Pegang erat"]
+    }]
+  },
+  "lepas": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["melepas", "menanggalkan"],
+      "contoh": ["Lepas sepatu", "Lepas baju"]
+    }]
+  },
+  "pakai": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["memakai", "mengenakan"],
+      "contoh": ["Pakai baju", "Pakai sepatu"]
+    }]
+  },
+  "ganti": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mengganti", "menukar"],
+      "contoh": ["Ganti baju", "Ganti uang"]
+    }]
+  },
+  "cari": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mencari", "memburu"],
+      "contoh": ["Cari kunci", "Cari kerja"]
+    }]
+  },
+  "dapat": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mendapat", "memperoleh"],
+      "contoh": ["Dapat hadiah", "Dapat nilai bagus"]
+    }]
+  },
+  "hilang": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menghilang", "lenyap"],
+      "contoh": ["Hilang jejak", "Hilang akal"]
+    }]
+  },
+  "ketemu": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menemukan", "bertemu"],
+      "contoh": ["Ketemu teman", "Ketemu jalan"]
+    }]
+  },
+  "bantu": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["membantu", "menolong"],
+      "contoh": ["Bantu ibu", "Bantu teman"]
+    }]
+  },
+  "tolong": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menolong", "membantu"],
+      "contoh": ["Tolong saya", "Tolong orang"]
+    }]
+  },
+  "ajak": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mengajak", "menyuruh ikut"],
+      "contoh": ["Ajak teman", "Ajak main"]
+    }]
+  },
+  "ikut": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mengikuti", "turut serta"],
+      "contoh": ["Ikut lomba", "Ikut aturan"]
+    }]
+  },
+  "tunggu": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menunggu", "menanti"],
+      "contoh": ["Tunggu sebentar", "Tunggu di sini"]
+    }]
+  },
+  "tanya": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["bertanya", "mempertanyakan"],
+      "contoh": ["Tanya guru", "Tanya jalan"]
+    }]
+  },
+  "jawab": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["menjawab", "memberikan jawaban"],
+      "contoh": ["Jawab pertanyaan", "Jawab telepon"]
+    }]
+  },
+  "cerita": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": ["kisah atau narasi", "dongeng atau pengalaman"],
+      "contoh": ["Cerita dongeng", "Cerita pengalaman"]
+    }, {
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["bercerita", "mengisahkan"],
+      "contoh": ["Cerita ke teman", "Cerita tentang liburan"]
+    }]
+  },
+  "teriak": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["berteriak", "bersuara keras"],
+      "contoh": ["Teriak kencang", "Teriak minta tolong"]
+    }]
+  },
+  "bisik": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["berbisik", "berkata pelan"],
+      "contoh": ["Bisik-bisik", "Bisik ke telinga"]
+    }]
+  },
+  "tertawa": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mengeluarkan suara karena geli atau senang", "ketawa"],
+      "contoh": ["Tertawa lepas", "Tertawa senang"]
+    }]
+  },
+  "menangis": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["mengeluarkan air mata", "nangis"],
+      "contoh": ["Menangis sedih", "Menangis keras"]
+    }]
+  },
+  "senyum": {
+    "arti": [{
+      "kelas": "Verba (kata kerja)",
+      "deskripsi": ["tersenyum", "menampakkan rasa senang"],
+      "contoh": ["Senyum manis", "Senyum ramah"]
+    }]
+  },
+  "orang": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": ["manusia", "individu"],
+      "contoh": ["Banyak orang", "Orang baik"]
+    }]
+  },
+  "anak": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": ["keturunan", "anak kecil"],
+      "contoh": ["Anak kecil", "Anak kandung"]
+    }]
+  },
+  "bapak": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": ["ayah", "orang tua laki-laki"],
+      "contoh": ["Bapak saya", "Terima kasih pak"]
+    }]
+  },
+  "ibu": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": ["mama", "orang tua perempuan"],
+      "contoh": ["Ibu saya", "Terima kasih bu"]
+    }]
+  },
+  "ayah": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": ["bapak", "orang tua laki-laki"],
+      "contoh": ["Ayah bekerja", "Ayah sayang"]
+    }]
+  },
+  "kakak": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": ["saudara yang lebih tua", "abang atau mbak"],
+      "contoh": ["Kakak laki-laki", "Kakak perempuan"]
+    }]
+  },
+  "adik": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": ["saudara yang lebih muda", "dik"],
+      "contoh": ["Adik laki-laki", "Adik perempuan"]
+    }]
+  },
+  "teman": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": ["kawan", "sahabat"],
+      "contoh": ["Teman baik", "Teman dekat"]
+    }]
+  },
+  "guru": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": ["pengajar", "pendidik"],
+      "contoh": ["Guru sekolah", "Guru les"]
+    }]
+  },
+  "murid": {
+    "arti": [{
+      "kelas": "Nomina (kata benda)",
+      "deskripsi": ["siswa", "pelajar"],
+      "contoh": ["Murid SD", "Murid teladan"]
+    }]
+  }
+}
