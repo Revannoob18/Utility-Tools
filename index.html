@@ -5,432 +5,218 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>All-in-One Life Toolkit - Solusi Lengkap untuk Kehidupan Sehari-hari</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    :root {
-      --landing-primary: #3b82f6;
-      --landing-secondary: #10b981;
-      --landing-accent: #f59e0b;
-      --landing-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-      --landing-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
-    }
-    body {
-      background: var(--bg);
-    }
-    .landing-hero {
-      background: var(--landing-gradient);
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      padding: 0;
-    }
-    .hero-particles {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-    }
-    .hero-content {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 60px;
-      z-index: 2;
-      width: 100%;
-      max-width: 1200px;
-      padding: 60px 20px;
-    }
-    .hero-text {
-      flex: 1;
-      text-align: left;
-      min-width: 320px;
-    }
-    .hero-title {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 1.2rem;
-      line-height: 1.1;
-      color: #fff;
-      text-shadow: 0 0 20px rgba(59,130,246,0.2);
-    }
-    .hero-subtitle {
-      font-size: 1.3rem;
-      margin-bottom: 2.2rem;
-      color: #e0e7ef;
-      max-width: 500px;
-      line-height: 1.5;
-    }
-    .cta-button {
-      background: linear-gradient(45deg, var(--landing-primary), var(--landing-secondary));
-      color: white;
-      border: none;
-      padding: 18px 40px;
-      font-size: 1.3rem;
-      font-weight: 600;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-      box-shadow: var(--landing-shadow);
-      margin-top: 10px;
-    }
-    .cta-button:hover {
-      background: linear-gradient(45deg, var(--landing-secondary), var(--landing-accent));
-      transform: translateY(-3px) scale(1.04);
-      box-shadow: 0 25px 50px rgba(59, 130, 246, 0.3);
-    }
-    .hero-illustration {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 260px;
-    }
-    .features {
-      padding: 80px 20px;
-      background: linear-gradient(135deg, var(--bg) 0%, #f0f9ff 50%, var(--bg) 100%);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .features h2 {
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      color: var(--text);
-      font-weight: 700;
-    }
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .feature-card {
-      background: var(--bg-alt);
-      padding: 2rem;
-      border-radius: 18px;
-      box-shadow: var(--shadow-soft);
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
-      position: relative;
-      overflow: hidden;
-      min-height: 220px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .feature-card:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.12);
-      border-color: var(--landing-primary);
-    }
-    .feature-icon {
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .feature-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.7rem;
-      color: var(--text);
-    }
-    .feature-desc {
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 1rem;
-    }
-    .testimonials {
-      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-      padding: 70px 20px;
-      text-align: center;
-    }
-    .testimonials h2 {
-      font-size: 2.2rem;
-      margin-bottom: 2.5rem;
-      color: var(--primary);
-      font-weight: 700;
-    }
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .testimonial-card {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(59,130,246,0.08);
-      padding: 2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 180px;
-    }
-    .testimonial-avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      color: #fff;
-      font-size: 1.5rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-    .testimonial-text {
-      font-size: 1.05rem;
-      color: var(--text);
-      margin-bottom: 0.7rem;
-      font-style: italic;
-    }
-    .testimonial-name {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .cta-section {
-      background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
-      color: #fff;
-      text-align: center;
-      padding: 70px 20px;
-      position: relative;
-    }
-    .cta-content h2 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin-bottom: 1.2rem;
-    }
-    .cta-content p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-    .cta-button.cta-big {
-      font-size: 1.4rem;
-      padding: 22px 60px;
-      border-radius: 60px;
-      font-weight: 700;
-      box-shadow: 0 10px 30px rgba(16,185,129,0.15);
-    }
-    .footer {
-      padding: 40px 20px;
-      background: linear-gradient(135deg, var(--bg-alt) 0%, #f8fafc 100%);
-      text-align: center;
-      color: var(--muted);
-      position: relative;
-    }
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-    .footer-social {
-      display: flex;
-      gap: 1.2rem;
-      margin-top: 0.5rem;
-    }
-    .footer-social a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.2s;
-    }
-    .footer-social a:hover {
-      transform: scale(1.15);
-    }
-    .decor-fade {
-      opacity: 0;
-      transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
-    }
-    .decor-fade.visible {
-      opacity: 1 !important;
-    }
-    .decor-fade.out {
-      opacity: 0 !important;
-    }
-    .fade-in-on-scroll {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
-    }
-    .fade-in-on-scroll.visible {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
-    .fade-in-on-scroll.out {
-      opacity: 0 !important;
-      transform: translateY(40px) !important;
-    }
-    .feature-card.fade-in-on-scroll {
-      transition-delay: 0.2s;
-    }
-    .testimonial-card.fade-in-on-scroll {
-      transition-delay: 0.3s;
-    }
-    .cta-content.fade-in-on-scroll {
-      transition-delay: 0.4s;
-    }
-    @media (max-width: 900px) {
-      .hero-content {
-        flex-direction: column;
-        gap: 30px;
-        padding: 40px 10px;
-      }
-      .hero-text {
-        text-align: center;
-      }
-      .hero-illustration {
-        margin-top: 20px;
-      }
-    }
-    @media (max-width: 600px) {
-      .hero-title { font-size: 2.1rem; }
-      .hero-subtitle { font-size: 1rem; }
-      .features h2, .testimonials h2, .cta-content h2 { font-size: 1.3rem; }
-      .feature-grid, .testimonial-grid { grid-template-columns: 1fr; }
-      .cta-button.cta-big { font-size: 1.1rem; padding: 16px 30px; }
-    }
-  </style>
 </head>
 <body>
-  <section class="landing-hero">
-    <div class="hero-particles">
-      <svg width="100%" height="100%" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-        <circle class="decor-fade" cx="200" cy="120" r="8" fill="#3b82f6" opacity="0.18"/>
-        <circle class="decor-fade" cx="400" cy="300" r="6" fill="#10b981" opacity="0.15"/>
-        <circle class="decor-fade" cx="900" cy="100" r="10" fill="#f59e0b" opacity="0.13"/>
-        <circle class="decor-fade" cx="1200" cy="400" r="7" fill="#f093fb" opacity="0.16"/>
-        <circle class="decor-fade" cx="700" cy="500" r="5" fill="#ef4444" opacity="0.12"/>
-        <circle class="decor-fade" cx="300" cy="500" r="4" fill="#3b82f6" opacity="0.14"/>
-        <circle class="decor-fade" cx="1100" cy="200" r="9" fill="#10b981" opacity="0.17"/>
-        <circle class="decor-fade" cx="600" cy="250" r="6" fill="#f59e0b" opacity="0.13"/>
-        <circle class="decor-fade" cx="1300" cy="100" r="7" fill="#f093fb" opacity="0.16"/>
-        <!-- Extra decorations -->
-        <rect class="decor-fade" x="100" y="50" width="18" height="18" rx="6" fill="#60a5fa" opacity="0.13"/>
-        <rect class="decor-fade" x="800" y="400" width="14" height="14" rx="4" fill="#fbbf24" opacity="0.13"/>
-        <ellipse class="decor-fade" cx="350" cy="200" rx="10" ry="5" fill="#a7f3d0" opacity="0.13"/>
-        <ellipse class="decor-fade" cx="1200" cy="150" rx="12" ry="6" fill="#f472b6" opacity="0.13"/>
-        <circle class="decor-fade" cx="100" cy="550" r="12" fill="#f472b6" opacity="0.13"/>
-        <rect class="decor-fade" x="1350" y="50" width="20" height="20" rx="8" fill="#a7f3d0" opacity="0.13"/>
-        <ellipse class="decor-fade" cx="900" cy="300" rx="16" ry="8" fill="#60a5fa" opacity="0.13"/>
-        <ellipse class="decor-fade" cx="400" cy="100" rx="10" ry="5" fill="#fbbf24" opacity="0.13"/>
-      </svg>
-    </div>
-    <div class="hero-content fade-in-on-scroll">
-      <div class="hero-text">
-        <h1 class="hero-title">All-in-One Life Toolkit</h1>
-        <p class="hero-subtitle">Solusi lengkap untuk produktivitas, gaya hidup sehat, dan pengelolaan waktu. Semua fitur favorit Anda dalam satu aplikasi modern!</p>
-        <a href="app.html" class="cta-button">Mulai Sekarang</a>
+  <button class="theme-toggle" id="theme-toggle">
+    <span class="theme-toggle-icon">🌙</span>
+  </button>
+
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-brand">
+        <h1>All-in-One Life Toolkit</h1>
       </div>
+      <div class="nav-links">
+        <a href="#features">Fitur</a>
+        <a href="#testimonials">Testimoni</a>
+        <a href="app.html" class="nav-cta">Mulai Sekarang</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-particles">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+      <div class="particle particle-5"></div>
+      <div class="particle particle-6"></div>
+      <div class="particle particle-7"></div>
+      <div class="particle particle-8"></div>
+      <div class="particle particle-9"></div>
+      <div class="particle particle-10"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">Kelola Hidup Anda dengan Mudah</h1>
+      <p class="hero-subtitle">Toolkit lengkap untuk produktivitas, kesehatan, dan pengelolaan waktu. Semua alat favorit Anda dalam satu aplikasi modern dan intuitif.</p>
+      <div class="hero-actions">
+        <a href="app.html" class="btn btn-primary">Mulai Gratis</a>
+        <a href="#features" class="btn btn-secondary">Pelajari Lebih Lanjut</a>
+      </div>
+    </div>
+    <div class="hero-visual">
       <div class="hero-illustration">
-        <!-- SVG Illustration -->
-        <svg width="260" height="220" viewBox="0 0 260 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="130" cy="110" rx="120" ry="90" fill="url(#paint0_radial)"/>
-          <circle cx="80" cy="80" r="30" fill="#3b82f6" opacity="0.7"/>
-          <circle cx="180" cy="140" r="22" fill="#10b981" opacity="0.7"/>
-          <circle cx="130" cy="60" r="18" fill="#f59e0b" opacity="0.7"/>
-          <circle cx="170" cy="70" r="12" fill="#f093fb" opacity="0.7"/>
+        <!-- Modern Toolkit Logo -->
+        <svg class="toolbox-svg" width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientTransform="translate(130 110) scale(120 90)" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#e0f2fe"/>
-              <stop offset="1" stop-color="#667eea"/>
-            </radialGradient>
+            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3b82f6"/>
+              <stop offset="100%" stop-color="#8b5cf6"/>
+            </linearGradient>
           </defs>
+          <!-- Toolbox -->
+          <rect x="100" y="150" width="200" height="120" rx="20" fill="url(#logoGradient)" opacity="0.9"/>
+          <rect x="120" y="170" width="160" height="80" rx="10" fill="var(--bg-alt)" stroke="var(--border)" stroke-width="2"/>
+          <!-- Tools -->
+          <rect x="140" y="190" width="40" height="8" rx="4" fill="#ef4444"/>
+          <rect x="200" y="190" width="40" height="8" rx="4" fill="#10b981"/>
+          <rect x="260" y="190" width="40" height="8" rx="4" fill="#f59e0b"/>
+          <circle cx="160" cy="220" r="15" fill="#3b82f6"/>
+          <circle cx="220" cy="220" r="15" fill="#8b5cf6"/>
+          <circle cx="280" cy="220" r="15" fill="#f093fb"/>
+          <!-- Floating Elements -->
+          <circle cx="50" cy="100" r="20" fill="#e0f2fe" opacity="0.6"/>
+          <circle cx="350" cy="80" r="25" fill="#f0f9ff" opacity="0.5"/>
+          <rect x="320" y="200" width="30" height="30" rx="5" fill="#fef3c7" opacity="0.7"/>
         </svg>
       </div>
     </div>
   </section>
 
-  <section class="features fade-in-on-scroll">
-    <h2 class="fade-in-on-scroll">Fitur Unggulan</h2>
-    <div class="feature-grid">
-      <div class="feature-card fade-in-on-scroll">
-        <div class="feature-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#3b82f6"/><text x="12" y="16" text-anchor="middle" font-size="16" fill="#fff">QR</text></svg></div>
-        <h3 class="feature-title">QR Code Generator</h3>
-        <p class="feature-desc">Buat QR code untuk teks, URL, kontak, dan banyak lagi dengan mudah dan cepat.</p>
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Fitur Unggulan</h2>
+        <p>Alat-alat canggih untuk membantu Anda mengelola setiap aspek kehidupan</p>
       </div>
-      <div class="feature-card fade-in-on-scroll">
-        <div class="feature-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="4" fill="#10b981"/><text x="12" y="16" text-anchor="middle" font-size="16" fill="#fff">↔</text></svg></div>
-        <h3 class="feature-title">Unit Converter</h3>
-        <p class="feature-desc">Konversi unit panjang, berat, suhu, kecepatan, dan lainnya secara real-time.</p>
-      </div>
-      <div class="feature-card fade-in-on-scroll">
-        <div class="feature-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#f59e0b"/><text x="12" y="16" text-anchor="middle" font-size="16" fill="#fff">✓</text></svg></div>
-        <h3 class="feature-title">To-Do List</h3>
-        <p class="feature-desc">Kelola tugas harian Anda dengan mudah dan tingkatkan produktivitas.</p>
-      </div>
-      <div class="feature-card fade-in-on-scroll">
-        <div class="feature-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="4" fill="#f093fb"/><text x="12" y="16" text-anchor="middle" font-size="16" fill="#fff">⏰</text></svg></div>
-        <h3 class="feature-title">Pomodoro Timer</h3>
-        <p class="feature-desc">Teknik Pomodoro untuk fokus kerja yang lebih baik dan istirahat yang teratur.</p>
-      </div>
-      <div class="feature-card fade-in-on-scroll">
-        <div class="feature-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#ef4444"/><text x="12" y="16" text-anchor="middle" font-size="16" fill="#fff">Rp</text></svg></div>
-        <h3 class="feature-title">Finance Tracker</h3>
-        <p class="feature-desc">Pantau pengeluaran dan pemasukan Anda dengan laporan yang detail.</p>
-      </div>
-      <div class="feature-card fade-in-on-scroll">
-        <div class="feature-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="4" fill="#3b82f6"/><text x="12" y="16" text-anchor="middle" font-size="16" fill="#fff">FC</text></svg></div>
-        <h3 class="feature-title">Flashcard</h3>
-        <p class="feature-desc">Belajar bahasa baru atau materi apa pun dengan flashcards interaktif.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials fade-in-on-scroll">
-    <h2 class="fade-in-on-scroll">Apa Kata Pengguna?</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card fade-in-on-scroll">
-        <div class="testimonial-avatar" style="background:#3b82f6;">A</div>
-        <div class="testimonial-text">"Sangat membantu untuk mengatur jadwal dan tugas harian! UI-nya keren dan mudah digunakan."</div>
-        <div class="testimonial-name">- Andi, Mahasiswa</div>
-      </div>
-      <div class="testimonial-card fade-in-on-scroll">
-        <div class="testimonial-avatar" style="background:#10b981;">B</div>
-        <div class="testimonial-text">"Fitur converter dan QR code sangat praktis. Semua kebutuhan harian ada di sini!"</div>
-        <div class="testimonial-name">- Budi, Freelancer</div>
-      </div>
-      <div class="testimonial-card fade-in-on-scroll">
-        <div class="testimonial-avatar" style="background:#f59e0b;">C</div>
-        <div class="testimonial-text">"Aplikasi ini bikin hidup lebih terorganisir. Suka banget sama desainnya!"</div>
-        <div class="testimonial-name">- Citra, Ibu Rumah Tangga</div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>QR Code Generator</h3>
+          <p>Buat QR code untuk teks, URL, kontak, dan banyak lagi dengan mudah.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3>Unit Converter</h3>
+          <p>Konversi unit panjang, berat, suhu, kecepatan, dan lainnya secara real-time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3>To-Do List</h3>
+          <p>Kelola tugas harian Anda dengan mudah dan tingkatkan produktivitas.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⏱️</div>
+          <h3>Pomodoro Timer</h3>
+          <p>Teknik Pomodoro untuk fokus kerja yang lebih baik dan istirahat yang teratur.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Finance Tracker</h3>
+          <p>Pantau pengeluaran dan pemasukan Anda dengan laporan yang detail.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>Flashcard</h3>
+          <p>Belajar bahasa baru atau materi apa pun dengan flashcards interaktif.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="cta-section fade-in-on-scroll">
-    <div class="cta-content fade-in-on-scroll">
-      <h2>Siap Hidup Lebih Mudah?</h2>
-      <p>Gabung sekarang dan nikmati semua fitur gratis tanpa batas!</p>
-      <a href="app.html" class="cta-button cta-big">Mulai Sekarang</a>
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>Apa Kata Pengguna?</h2>
+        <p>Ribuan orang telah mempercayai toolkit kami untuk mengelola kehidupan mereka</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"Sangat membantu untuk mengatur jadwal dan tugas harian! UI-nya keren dan mudah digunakan."</div>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <div class="author-name">Andi</div>
+              <div class="author-role">Mahasiswa</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"Fitur converter dan QR code sangat praktis. Semua kebutuhan harian ada di sini!"</div>
+          <div class="testimonial-author">
+            <div class="author-avatar">B</div>
+            <div class="author-info">
+              <div class="author-name">Budi</div>
+              <div class="author-role">Freelancer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"Aplikasi ini bikin hidup lebih terorganisir. Suka banget sama desainnya!"</div>
+          <div class="testimonial-author">
+            <div class="author-avatar">C</div>
+            <div class="author-info">
+              <div class="author-name">Citra</div>
+              <div class="author-role">Ibu Rumah Tangga</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Siap Mengubah Cara Anda Mengelola Hidup?</h2>
+        <p>Gabung sekarang dan nikmati semua fitur gratis tanpa batas!</p>
+        <a href="app.html" class="btn btn-primary btn-large">Mulai Sekarang</a>
+      </div>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2025 All-in-One Life Toolkit. Dibuat untuk memudahkan hidup Anda.</p>
-      <div class="footer-social">
-        <a href="#" title="Instagram"><svg width="24" height="24" fill="#3b82f6"><circle cx="12" cy="12" r="10"/><rect x="8" y="8" width="8" height="8" rx="2" fill="#fff"/></svg></a>
-        <a href="#" title="Twitter"><svg width="24" height="24" fill="#10b981"><circle cx="12" cy="12" r="10"/><path d="M8 12c2 2 6 2 8-2" stroke="#fff" stroke-width="2" fill="none"/></svg></a>
-        <a href="#" title="Facebook"><svg width="24" height="24" fill="#f59e0b"><circle cx="12" cy="12" r="10"/><rect x="10" y="8" width="4" height="8" fill="#fff"/></svg></a>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>All-in-One Life Toolkit</h3>
+          <p>Membuat hidup lebih mudah, satu alat dalam satu waktu.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Produk</h4>
+            <a href="#features">Fitur</a>
+            <a href="app.html">Aplikasi</a>
+          </div>
+          <div class="footer-section">
+            <h4>Dukungan</h4>
+            <a href="#">Bantuan</a>
+            <a href="#">Kontak</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 All-in-One Life Toolkit. Dibuat untuk memudahkan hidup Anda.</p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Smooth scroll for any anchors if needed
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    function toggleTheme() {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeToggle.innerHTML = newTheme === 'dark' ? '<span class="theme-toggle-icon">☀️</span>' : '<span class="theme-toggle-icon">🌙</span>';
+    }
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', toggleTheme);
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    if (themeToggle) {
+      themeToggle.innerHTML = savedTheme === 'dark' ? '<span class="theme-toggle-icon">☀️</span>' : '<span class="theme-toggle-icon">🌙</span>';
+    }
+
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -440,7 +226,7 @@
       });
     });
 
-    // Intersection Observer for scroll animations
+    // Intersection Observer for animations
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -449,83 +235,14 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.animationDelay = '0s';
-          entry.target.style.animationPlayState = 'running';
+          entry.target.classList.add('animate-in');
         }
       });
     }, observerOptions);
 
-    // Observe feature cards
-    document.querySelectorAll('.feature-card').forEach((card, index) => {
-      card.style.animationDelay = `${index * 0.2}s`;
-      observer.observe(card);
+    document.querySelectorAll('.feature-card, .testimonial-card, .section-header').forEach(el => {
+      observer.observe(el);
     });
-
-    // Typing effect for subtitle (optional enhancement)
-    const subtitle = document.querySelector('.hero-subtitle');
-    if (subtitle) {
-      const text = subtitle.textContent;
-      subtitle.textContent = '';
-      let i = 0;
-      const typeWriter = () => {
-        if (i < text.length) {
-          subtitle.textContent += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 50);
-        }
-      };
-      setTimeout(typeWriter, 1500); // Start after title animation
-    }
-
-    // Dynamic color change on hover for stats
-    document.querySelectorAll('.stat-item').forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        item.style.background = 'linear-gradient(45deg, #ffd700, #ff6b6b)';
-        item.style.animation = 'none';
-      });
-      item.addEventListener('mouseleave', () => {
-        item.style.background = 'linear-gradient(45deg, #fff, #ffd700)';
-        item.style.animation = 'countUp 2s ease-out forwards';
-      });
-    });
-
-    // Fade in/out decorations on scroll
-    function handleDecorFade() {
-      const decorEls = document.querySelectorAll('.decor-fade');
-      const trigger = window.scrollY;
-      decorEls.forEach((el, i) => {
-        const offset = 100 + i * 40;
-        if (trigger > offset && trigger < offset + 400) {
-          el.classList.add('visible');
-          el.classList.remove('out');
-        } else if (trigger >= offset + 400) {
-          el.classList.remove('visible');
-          el.classList.add('out');
-        } else {
-          el.classList.remove('visible');
-          el.classList.remove('out');
-        }
-      });
-    }
-    window.addEventListener('scroll', handleDecorFade);
-    window.addEventListener('DOMContentLoaded', handleDecorFade);
-
-    // Fade in/out for sections and cards
-    function handleSectionFade() {
-      const fadeEls = document.querySelectorAll('.fade-in-on-scroll');
-      fadeEls.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 60 && rect.bottom > 60) {
-          el.classList.add('visible');
-          el.classList.remove('out');
-        } else {
-          el.classList.remove('visible');
-          el.classList.add('out');
-        }
-      });
-    }
-    window.addEventListener('scroll', handleSectionFade);
-    window.addEventListener('DOMContentLoaded', handleSectionFade);
   </script>
 </body>
 </html>
